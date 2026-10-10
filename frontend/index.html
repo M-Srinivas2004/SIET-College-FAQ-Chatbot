@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CollegeBot | Smart Campus Information</title>
+    <meta
+      name="description"
+      content="Professional college information bot with modern dashboard and AI-style assistant."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">C</div>
+          <div>
+            <p class="eyebrow">Smart Campus</p>
+            <h1>CollegeBot</h1>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#support">Support</a>
+          <a href="#chatbot">Chat</a>
+        </nav>
+
+        <button class="nav-button">Apply Now</button>
+      </header>
+
+      <main>
+        <section class="hero" id="about">
+          <div class="hero-copy">
+            <span class="pill">Admissions • Courses • Campus Life</span>
+            <h2>Everything students need to know, in one smart assistant.</h2>
+            <p>
+              Ask about admissions, scholarships, courses, faculty, placements, and
+              campus life. CollegeBot gives fast, friendly answers for future and
+              current students.
+            </p>
+
+            <div class="cta-row">
+              <a href="#chatbot" class="primary-btn">Ask the Bot</a>
+              <a href="#programs" class="secondary-btn">Explore Programs</a>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>45+</strong>
+                <span>Academic Programs</span>
+              </div>
+              <div class="stat-card">
+                <strong>96%</strong>
+                <span>Placement Support</span>
+              </div>
+              <div class="stat-card">
+                <strong>24/7</strong>
+                <span>Student Guidance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="bot-card">
+              <div class="bot-header">
+                <span class="status-dot"></span>
+                <span>CollegeBot Live</span>
+              </div>
+
+              <div class="bot-message message-out">
+                Hi! I can help with admissions, fees, courses, and scholarships.
+              </div>
+              <div class="bot-message message-in">
+                What are the top undergraduate programs?
+              </div>
+              <div class="bot-message message-out highlight">
+                Computer Science, Business, Engineering, Design, and Health Sciences are among the most popular options.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-band" id="programs">
+          <div class="feature-item">
+            <span class="feature-icon">🎓</span>
+            <div>
+              <h3>Academic Excellence</h3>
+              <p>Industry-focused programs and expert faculty.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💼</span>
+            <div>
+              <h3>Career Growth</h3>
+              <p>Strong placement support and internship pathways.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🏫</span>
+            <div>
+              <h3>Campus Life</h3>
+              <p>Clubs, events, sports, mentoring, and student community.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <article class="info-panel">
+            <div class="panel-heading">
+              <span class="mini-tag">Popular programs</span>
+              <h3>Study paths that match your goals</h3>
+            </div>
+
+            <div class="program-list">
+              <div class="program-card">
+                <h4>B.Tech</h4>
+                <p>Engineering, AI, robotics, and software systems.</p>
+              </div>
+              <div class="program-card">
+                <h4>BBA</h4>
+                <p>Business leadership, marketing, and entrepreneurship.</p>
+              </div>
+              <div class="program-card">
+                <h4>B.Sc</h4>
+                <p>Science, analytics, lab research, and applied studies.</p>
+              </div>
+              <div class="program-card">
+                <h4>MBA</h4>
+                <p>Leadership development and strategic management.</p>
+              </div>
+            </div>
+          </article>
+
+          <aside class="info-panel accent" id="support">
+            <div class="panel-heading">
+              <span class="mini-tag">Student support</span>
+              <h3>Need quick help?</h3>
+            </div>
+
+            <ul class="support-list">
+              <li>Admissions guidance and application deadlines</li>
+              <li>Scholarships and financial assistance</li>
+              <li>Hostel and campus accommodation</li>
+              <li>Placement and internship support</li>
+              <li>Academic advising and student services</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="chatbot-section" id="chatbot">
+          <div class="section-header">
+            <span class="mini-tag">AI assistant</span>
+            <h3>Talk to CollegeBot</h3>
+          </div>
+
+          <div class="chatbot-shell">
+            <div class="chat-window" id="chatWindow" aria-live="polite">
+              <div class="message bot">
+                <div class="avatar">C</div>
+                <div class="bubble">Hello! I’m CollegeBot. How can I help you today?</div>
+              </div>
+            </div>
+
+            <div class="suggestions" aria-label="Quick actions">
+              <button class="chip" data-message="What are the admission requirements?">Admission</button>
+              <button class="chip" data-message="Tell me about scholarships">Scholarships</button>
+              <button class="chip" data-message="Which courses are available?">Courses</button>
+              <button class="chip" data-message="How does campus life work?">Campus Life</button>
+            </div>
+
+            <form class="chat-form" id="chatForm">
+              <input
+                id="userInput"
+                type="text"
+                placeholder="Ask about admissions, courses, scholarships, or campus life..."
+                aria-label="Type your message"
+              />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
